@@ -1,11 +1,11 @@
 package beanConfig;
 
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties.Producer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.w4d1.w4d1.Drink;
 import com.w4d1.w4d1.Food;
+import com.w4d1.w4d1.Merch;
 import com.w4d1.w4d1.Pizza;
 import com.w4d1.w4d1.Product;
 import com.w4d1.w4d1.Topping.toppings;
@@ -55,12 +55,14 @@ public class ConfigurationBean {
 
     @Bean
     public Product shirt(){
-        Product Shirt = new Product(21.99);
+        Merch Shirt = new Merch("Shirt");
+        Shirt.setPrice(21.99);
         return Shirt;
     }
     @Bean
     public Product mug(){
-        Product Mug = new Product(4.99);
+        Merch Mug = new Merch("Mug");
+        Mug.setPrice(4.99);
         return Mug;
     }
 }

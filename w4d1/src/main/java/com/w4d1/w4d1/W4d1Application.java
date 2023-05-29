@@ -1,7 +1,5 @@
 package com.w4d1.w4d1;
 
-import java.util.Arrays;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -30,11 +28,9 @@ public class W4d1Application {
 		Drink lemonade = (Drink) appContext.getBean("lemonade");
 		Drink water = (Drink) appContext.getBean("water");
 		Drink wine = (Drink) appContext.getBean("wine");
-		
-
-		
+		Merch shirt = (Merch) appContext.getBean("shirt");
+		Merch mug = (Merch) appContext.getBean("mug");
 	
-
 		System.out.println("Pizzas------------------------");
 		margherita.showPizza();
 		hawaian.showPizza();
@@ -51,7 +47,8 @@ public class W4d1Application {
 		water.showDrink();
 		wine.showDrink();
 		System.out.println("Franchise------------------------");
-		
+		shirt.showMerch();
+		mug.showMerch();
 
 		appContext.close();
 	}
